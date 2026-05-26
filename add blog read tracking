@@ -1,0 +1,3 @@
+import { trackBlogRead } from "../utils/analytics";
+
+<div onClick={() => trackBlogRead(b.id)}>
