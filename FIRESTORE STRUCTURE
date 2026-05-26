@@ -1,0 +1,9 @@
+products/
+  - title
+  - description
+  - createdAt
+
+blogs/
+  - title
+  - content
+  - createdAt
