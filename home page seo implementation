@@ -1,0 +1,11 @@
+import { useEffect } from "react";
+import { setSEO } from "../utils/seo";
+
+useEffect(() => {
+  setSEO({
+    title: "NORTH | Premium Digital Studio",
+    description: "Work with North — premium websites, products, and digital systems.",
+    image: "/logo.png",
+    url: "https://your-domain.com"
+  });
+}, []);
