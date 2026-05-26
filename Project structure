@@ -1,0 +1,54 @@
+north/
+├── public/
+│   ├── index.html
+│   ├── logo.png (YOUR UPLOADED NORTH LOGO)
+│   ├── _redirects (Netlify routing)
+│   └── sitemap.xml
+│
+├── src/
+│   ├── app/
+│   │   ├── App.jsx
+│   │   ├── routes.jsx
+│   │
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Login.jsx
+│   │   ├── Admin.jsx
+│   │   ├── Products.jsx
+│   │   ├── Blogs.jsx
+│   │   ├── Analytics.jsx
+│   │
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Footer.jsx
+│   │   ├── ProtectedRoute.jsx
+│   │   ├── ProductCard.jsx
+│   │   ├── BlogCard.jsx
+│   │
+│   ├── cms/
+│   │   ├── productService.js
+│   │   ├── blogService.js
+│   │
+│   ├── firebase/
+│   │   ├── firebaseConfig.js
+│   │   ├── auth.js
+│   │   ├── firestore.js
+│   │
+│   ├── styles/
+│   │   ├── global.css
+│   │   ├── theme.css
+│   │
+│   ├── utils/
+│   │   ├── seo.js
+│   │   ├── analytics.js
+│   │
+│   ├── assets/
+│   │   ├── logo.png
+│   │
+│   ├── main.jsx
+│
+├── .env
+├── netlify.toml
+├── package.json
+├── vite.config.js
+└── README.md
