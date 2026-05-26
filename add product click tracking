@@ -1,0 +1,3 @@
+import { trackClick } from "../utils/analytics";
+
+<div onClick={() => trackClick(p.id)}>
