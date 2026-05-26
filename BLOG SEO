@@ -1,0 +1,8 @@
+useEffect(() => {
+  setSEO({
+    title: "Blogs | NORTH Insights",
+    description: "Read insights, updates, and digital strategies from North.",
+    image: "/logo.png",
+    url: "https://your-domain.com/blogs"
+  });
+}, []);
