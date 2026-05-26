@@ -1,0 +1,8 @@
+useEffect(() => {
+  setSEO({
+    title: "Products | NORTH",
+    description: "Explore premium digital products built by North.",
+    image: "/logo.png",
+    url: "https://your-domain.com/products"
+  });
+}, []);
