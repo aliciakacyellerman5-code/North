@@ -1,0 +1,46 @@
+import { useEffect, useState } from "react";
+import { db } from "../firebase/firebaseConfig";
+import { collection, getDocs } from "firebase/firestore";
+
+export default function Analytics() {
+  const [visits, setVisits] = useState(0);
+  const [clicks, setClicks] = useState(0);
+  const [blogs, setBlogs] = useState(0);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const v = await getDocs(collection(db, "analytics", "visits", "log"));
+      const c = await getDocs(collection(db, "analytics", "clicks", "log"));
+      const b = await getDocs(collection(db, "analytics", "blogReads", "log"));
+
+      setVisits(v.size);
+      setClicks(c.size);
+      setBlogs(b.size);
+    };
+
+    fetchData();
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-[#0B0A08] text-white p-10">
+      <h1 className="text-3xl font-bold mb-8">Analytics Dashboard</h1>
+
+      <div className="grid md:grid-cols-3 gap-6">
+        <div className="bg-[#15120F] p-6 rounded-xl">
+          <h2 className="text-xl">Visits</h2>
+          <p className="text-3xl mt-2">{visits}</p>
+        </div>
+
+        <div className="bg-[#15120F] p-6 rounded-xl">
+          <h2 className="text-xl">Product Clicks</h2>
+          <p className="text-3xl mt-2">{clicks}</p>
+        </div>
+
+        <div className="bg-[#15120F] p-6 rounded-xl">
+          <h2 className="text-xl">Blog Reads</h2>
+          <p className="text-3xl mt-2">{blogs}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
