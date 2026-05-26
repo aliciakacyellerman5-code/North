@@ -1,0 +1,2 @@
+<Route path="/products" element={<Products />} />
+<Route path="/blogs" element={<Blogs />} />
